@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.Title {
+    color: white;
+    display: flex;
+    align-self: center;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    @include mq(large) {
+        font-size: 3rem;
+    }
+    
+}
+
+.Button {
+    padding: 1rem;
+    background: purple;
+    color: white;
+}
+
+
+
+

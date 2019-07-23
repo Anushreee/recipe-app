@@ -1,0 +1,81 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+
+.Card {
+  
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    box-shadow: $box-shadow-primary;
+
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        display: block;
+        object-position: center center;
+    }
+
+    
+
+    @include mq(medium){
+        flex: 0 1 calc(50% - 1em);
+        margin-bottom: 2rem;
+    }
+
+    @include mq(large){
+        flex: 0 1 calc(33% - 1em);
+    }
+    
+}
+
+.Button {
+    //width: 150px;
+    padding: .5rem 1.5rem;
+    margin: 0;
+    text-decoration: none;   
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center; 
+    color: $button-text-color;
+}
+
+.ButtonSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+
+.ButtonPrimary {
+    background: $button-primary;
+
+    &:hover {
+        background: darken($button-primary,10%);
+    }
+}
+
+.ButtonSecondary {
+    background: $button-secondary;
+    &:hover {
+        background: darken($button-secondary,10%);
+    }
+}
+
+.Title {
+    margin: 1rem 0 0.5rem;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: $font-weight--medium;
+    color: $dark-green;
+}
+
+.Publisher {
+    font-size: 1rem;
+    font-weight: $font-weight--medium;
+    margin: 0 0 0.5rem;
+    padding: 0 1rem;
+}
+

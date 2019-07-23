@@ -1,0 +1,52 @@
+//Base Colors
+
+$white: #fff;
+$black: #000;
+$separator-color: #eee;
+$legend-color: #0073b1;
+$danger: tomato;
+$success: green;
+$light-green:#b0cc10;
+$dark-green: #227000;
+$purple: #cc0077;
+
+
+//Form Colors
+$form-section-bgcolor:    #fff;
+$text-box-color: #dbe0e2;
+$placeholder-color: #6d7578;
+
+//Heading colors
+
+$main-heading-color: $black;
+
+//Button colors
+$button-text-color: $white;
+$button-disabled-color: #fff;
+$button-disabled-bgcolor: #ccc;
+$button-disabled-border-color: #999;
+$button-primary: $purple;
+$button-secondary: $dark-green;
+$button-warning: orange;
+$button-danger: $danger;
+
+//Font Stacks
+$font-url--primary:      'https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700&display=swap';
+$font-url--secondary:    'https://fonts.googleapis.com/css?family=Lobster&display=swap';
+
+//Font Families
+$font-family--primary:   'Josefin sans',sans-serif;
+$font-family--secondary:  Georgia, serif;
+
+//Font Weights
+$font-weight--light:      300;
+$font-weight--medium:     400;
+$font-weight--bold:       600;
+$font-weight--ultra-bold: 800;
+
+//Transition:
+$main-transition: 0.3s linear;
+
+//Box-Shadow
+
+$box-shadow-primary: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);

@@ -1,0 +1,102 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.Wrapper {
+    margin:0 auto;
+    padding: 2rem 2rem;
+    @include mq(medium) {
+        max-width: 1050px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.Button {
+    border: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: $font-weight--bold;
+    font-family: $font-family--primary;
+    outline: none;  
+    margin: 1rem 0.5rem 1rem 0;  
+    padding: 0.5rem 1rem;
+    text-align: center;
+    white-space: nowrap;
+    transition: $main-transition;
+    text-decoration: none;   
+    display: inline-block;
+    border-radius: 4px;
+    color: $button-text-color;
+}
+
+.ButtonPrimary {
+    background: $button-primary;
+}
+
+.ButtonSecondary {
+    background: $button-secondary;
+}
+
+.ButtonWarning {
+    background: $button-warning;
+    margin-top: 0;
+}
+
+.ButtonSection {
+    display: flex;
+}
+
+.ImageContent {
+    @include mq(medium) {
+        flex: 0 1 30%;
+    }
+    @include mq(large) {
+        flex: 0 1 30%;
+    }
+    img {
+        width: 100%;
+        @include mq(medium) {
+            max-height: 11rem;
+        }
+
+        @include mq(large) {
+            max-height: 17rem;
+        }
+    }
+     
+}
+
+.Content {
+  
+    @include mq(medium) {   
+        flex: 0 1 55%;
+    }
+    @include mq(large) {
+        flex: 0 1 60%;
+    }
+}  
+
+.Title {
+    font-size: 1.5rem;   
+    color: $dark-green; 
+}
+
+.Lists {
+    margin: 1rem 0;
+    padding: 0;
+
+    h2 {
+        margin-bottom: 1rem;
+        color: $black;
+        text-align:left;
+        font-weight: 400;
+    }
+
+    li {
+        margin-left: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.4;  
+    }
+
+}

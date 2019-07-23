@@ -1,0 +1,19 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+
+.Button{
+    background: white;
+    color:$button-danger;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+h2 {
+    color: $white;
+    margin: 0 0 2rem;
+    text-align: center;
+    font-size: 2rem;
+}

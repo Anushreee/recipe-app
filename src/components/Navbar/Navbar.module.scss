@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.List {
+    display: flex;
+    margin: 0;
+    li {
+        list-style: none;
+    }
+    a{
+       text-decoration: none;
+       display: inline-block;
+       padding: 1rem;
+       text-transform: uppercase;
+       letter-spacing: 2px;
+       color: $black; 
+       font-weight: 600;
+    }
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $separator-color;
+    max-width: 1050px;
+    margin: 0 auto; 
+    height: 120px;
+    padding: 0 1rem;
+
+    @include mq(medium) {
+        padding: 0 2rem;
+    }
+
+    @include mq(large) {
+        padding: 0 1rem;
+    }
+
+    img {
+        height: 120px;
+    }
+}
