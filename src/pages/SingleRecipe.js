@@ -1,17 +1,35 @@
 import React,{Component} from 'react';
 import { recipeData } from '../data/tempDetails';
-import { NavLink } from 'react-router-dom';
+import {NavLink } from 'react-router-dom';
 import classes from './SingleRecipe.module.scss';
+import Spinner from '../components/UI/Spinner/Spinner';
+import axios from 'axios';
 
 export default class SingleRecipe extends Component {
   state = {
-    recipe: recipeData,
+    recipe: {},
     id: this.props.match.params.id,
-    loading: false
+    loading: true,
+    error: false
   };
 
-  render(){
-    
+
+  componentDidMount(){
+    axios.get(`https://www.food2fork.com/api/get?key=${process.env.REACT_APP_API_KEY}&rId=${this.state.id}`)
+          .then(response=>{
+            this.setState({
+              recipe: response.data.recipe,
+              loading: false
+            })  
+          })
+          .catch(error=>{
+            this.setState({
+              error: true
+            })
+          })
+  }
+
+  render() {
     const {
       image_url,
       publisher_url,
@@ -19,10 +37,15 @@ export default class SingleRecipe extends Component {
       title,
       ingredients
     } = this.state.recipe;
-    
-    
+
+    if (this.state.loading) {
+      return (
+            <Spinner />
+      );
+    }
     return (
       <div className={classes.Wrapper}>
+        
         <div className={classes.ImageContent}>
           <img
               src={image_url}
@@ -60,16 +83,18 @@ export default class SingleRecipe extends Component {
               <h2>Ingredients</h2>
               {ingredients.map((item, index) => {
                 return (
-                  <li key={index}>
+                  <li key={index} className="list-group-item text-slanted">
                     {item}
                   </li>
                 );
               })}
-          </ul>
+            </ul>
+            
+              
+          
       </div>
       </div>
+      
     );
   }
 }
-
-
