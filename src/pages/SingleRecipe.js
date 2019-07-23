@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import { recipeData } from '../data/tempDetails';
 import {NavLink } from 'react-router-dom';
 import classes from './SingleRecipe.module.scss';
 import Spinner from '../components/UI/Spinner/Spinner';
@@ -12,7 +11,6 @@ export default class SingleRecipe extends Component {
     loading: true,
     error: false
   };
-
 
   componentDidMount(){
     axios.get(`https://www.food2fork.com/api/get?key=${process.env.REACT_APP_API_KEY}&rId=${this.state.id}`)
@@ -40,12 +38,11 @@ export default class SingleRecipe extends Component {
 
     if (this.state.loading) {
       return (
-            <Spinner />
+        <Spinner />
       );
     }
     return (
       <div className={classes.Wrapper}>
-        
         <div className={classes.ImageContent}>
           <img
               src={image_url}
@@ -59,42 +56,33 @@ export default class SingleRecipe extends Component {
             >
             Back to Recipes 
           </NavLink>
-      
           <div className={classes.Title}><strong>{title}</strong></div>
           <div className = {classes.ButtonSection}>
             <a className={[classes.Button, classes.ButtonPrimary].join(' ')}
                 href={publisher_url}
                 target="_blank"
-                rel="noopener noreferrer"
-                
-              >
+                rel="noopener noreferrer">
                 Publisher Webpage
             </a>
             <a  className={[classes.Button, classes.ButtonSecondary].join(' ')}
                 href={source_url}
                 target="_blank"
-                rel="noopener noreferrer"
-                
-            >
+                rel="noopener noreferrer">
                 Recipe Url
             </a>
           </div>
           <ul className={classes.Lists}>
-              <h2>Ingredients</h2>
-              {ingredients.map((item, index) => {
-                return (
-                  <li key={index} className="list-group-item text-slanted">
-                    {item}
-                  </li>
-                );
-              })}
-            </ul>
-            
-              
-          
+            <h2>Ingredients</h2>
+            {ingredients.map((item, index) => {
+              return (
+                <li key={index}>
+                  {item}
+                </li>
+              );
+            })}
+          </ul>
       </div>
       </div>
-      
     );
   }
 }
