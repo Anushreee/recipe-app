@@ -15,15 +15,12 @@ Header {
     margin: 0;
     padding: 0;
     background: none;
-    color: gray;
-    
     font-style: italic;
     line-height: 1.4;
     margin: 0;
     position: relative;
-    text-shadow: 0 1px white;
-    z-index: 600;
-   
+    text-shadow: 0 1px $white;
+    z-index: 600;  
 }
 
 .TestimonialQuote blockquote * {
@@ -31,9 +28,9 @@ Header {
 }
 
 .TestimonialQuote blockquote p {
-    color: white; 
+    color: $white; 
     line-height: 1.4 !important;
-    font-style:italic;
+    font-style: italic;
     font-size: 1.5rem;
 
     @include mq(large) {
@@ -61,9 +58,9 @@ Header {
 }
 
 cite {
-    color:white;
+    color:$white;
     font-size: 1.5rem;
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     margin-top: 1rem;
 }
