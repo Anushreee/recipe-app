@@ -49,32 +49,21 @@
 
 .ImageContent {
     @include mq(medium) {
-        flex: 0 1 30%;
+        flex: 0 1 40%;
     }
-    @include mq(large) {
-        flex: 0 1 30%;
-    }
+   
     img {
         width: 100%;
         @include mq(medium) {
-            max-height: 11rem;
+            max-height: 30rem;
         }
-
-        @include mq(large) {
-            max-height: 17rem;
-        }
-    }
-     
+    }    
 }
 
 .Content {
-  
     @include mq(medium) {   
         flex: 0 1 55%;
-    }
-    @include mq(large) {
-        flex: 0 1 60%;
-    }
+    }  
 }  
 
 .Title {
