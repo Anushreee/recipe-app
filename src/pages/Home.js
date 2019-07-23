@@ -6,7 +6,7 @@ class Home extends Component {
   render(){
     return( 
         <React.Fragment>
-            <Header title="Welcome to Amazing Recipes">
+            <Header title="Welcome to Yummy Recipes">
               <div className={classes.TestimonialQuote}>
                 <blockquote>
                     <p>Humor keeps us alive. Humor and food. Don't forget food. You can go a week without laughing.”</p>
