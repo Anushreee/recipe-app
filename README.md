@@ -9,3 +9,8 @@ On the completion of the project, the following milestones will be achieved:
 
 Techologies used:
 React, create-react-app, SASS, SASS modules
+
+
+Allette:
+
+https://www.remotephcmanuals.com.au/
